@@ -73,6 +73,71 @@
                         <button class="second_btn"><i class="fa-regular fa-circle-play"></i> Watch Video</button>
                     </div>
                 </div>
+                <div class="col-md-6 right_section">
+                    <form action="" class="row">
+
+                        <div class="col-md-6">
+                            <div class="input_div">
+                                <label for="">Name : </label>
+                                <input type="text" name="name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input_div">
+                                <label for="">Phone Number :</label>
+                                <input type="tel" name="phone">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input_div">
+                                <label for="">Ticket Type : </label>
+                                <select id="ticket_type" name="ticket-type" required>
+                                  <option value="adult">Adult (&#8377; 1199)</option>
+                                  <option value="child">Child (&#8377; 899)</option>
+                                  <option value="senior">Senior (&#8377; 1399)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input_div">
+                                <label for="">Number of Ticket : </label>
+                                <input value="1" id="ticket_count" type="number" name="count">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="input_div">
+                                <label for="">Date : </label>
+                                <input name="date" id="meeting" type="date" value="2023-05-21"/>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="input_div">
+                                <label for="">Meal Plan : </label>
+                                <select id="meal_plan" name="meal-plan" required>
+                                    <option value="none">None</option>
+                                    <option value="basic">Basic (&#8377; 199)</option>
+                                    <option value="premium">Premium (&#8377; 399)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                          <div class="input_div">
+                              <label for="">Promo Code : </label>
+                              <input type="text" name="promo" id="promo_code">
+                          </div>
+                        </div>
+
+
+                        <h5 class="total">Total : &#8377;<span></span></h5>
+
+                        <div class="col-md-12 d-flex-full">
+                            <button type="submit" class="styled_btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -84,6 +149,8 @@
   </footer>
 
 
+  <!-- custom js  -->
+  <script src="assets/js/script.js"></script>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>

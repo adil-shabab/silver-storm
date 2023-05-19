@@ -42,6 +42,11 @@ a:hover{
 .styled_btn:hover{
     color: white;
 }
+.d-flex-full{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -125,4 +130,69 @@ a:hover{
 .hero_section .left_section .buttons .second_btn i{
     margin-right: 15px;
     font-size: 28px;
+}
+
+
+
+
+
+.hero_section .right_section{
+
+}
+.hero_section .right_section .input_div{
+    margin-top: 25px;
+    position: relative;
+}
+.hero_section .right_section .input_div input,
+.hero_section .right_section .input_div select{
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: 1px solid rgb(182, 182, 182);
+    padding: 8px 0px 0 15px;
+}
+.hero_section .right_section .input_div label{
+    position: absolute;
+    width: fit-content;
+    padding: 0px 8px;
+    background: white;
+    top: -10px;
+    left: 15px;
+    font-size: 14px;
+}
+.hero_section .right_section button{
+    margin-top: 25px;
+    padding: 10px 67px;
+    font-size: 16px;
+}
+.hero_section .right_section .total{
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+::-webkit-inner-spin-button { 
+    display:none;
+}
+::-webkit-calendar-picker-indicator { background-color:white}
+  input[type=date]{
+    font-size:16px;
+}
+::-webkit-datetime-edit-text { color:#555555}
+::-webkit-datetime-edit-month-field { color:#555555 }
+::-webkit-datetime-edit-day-field { color: #555555; }
+::-webkit-datetime-edit-year-field { color:#555555; }
+::-webkit-calendar-picker-indicator{ 
+    background-image: url(../img/calender.png);
+    background-position:center;
+    background-size:20px 20px;
+    background-repeat:no-repeat;
+    margin-right: 10px;
+    color:rgba(204,204,204,0);
 }
