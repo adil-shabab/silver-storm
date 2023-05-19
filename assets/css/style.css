@@ -12,6 +12,37 @@ a:hover{
     text-decoration: none;
 }
 
+.styled_btn{
+    outline: none;
+    background: #247ffb;
+    border: 1px solid #247ffb;
+    transition: 0.5s;
+    color: white;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+.styled_btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: #13287e;
+    transition: 0.3s linear;
+    z-index: -1;
+}
+.styled_btn:hover::before{
+    width: 100%;
+    left: 0;
+    color: white;
+}
+.styled_btn:hover{
+    color: white;
+}
+
 
 
 
@@ -48,33 +79,50 @@ a:hover{
     justify-content: center;
     align-items: center;
 }
-.hero_section .left_section{
-
-}
 .hero_section .left_section .heading{
     font-size: 50px;
     line-height: 60px;
     font-weight: bold;
+    position: relative;
+}
+.hero_section .left_section .heading::after{
+    content: '';
+    background: url(../img/water-slide.png);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    margin-left: 23px;
+    margin-top: 10px;
 }
 .hero_section .left_section .description{
     width: 88%;
     font-size: 15px;
-    margin-top: 15px;
+    margin-top: 25px;
     color: rgb(96, 96, 96);
 }
 .hero_section .left_section .buttons{
     display: flex;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 .hero_section .left_section .buttons button{
     outline: none;
-    background: white;
     padding: 8px 15px;
     margin-right: 20px;
     border-radius: 5px;
 }
 .hero_section .left_section .buttons .first_btn{
-    border: 2px solid #247ffb;
-    background: #247ffb;
-    color: white;
+    padding: 10px 30px;
+}
+.hero_section .left_section .buttons .second_btn{
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+.hero_section .left_section .buttons .second_btn i{
+    margin-right: 15px;
+    font-size: 28px;
 }
