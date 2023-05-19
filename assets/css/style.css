@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial', sans-serif;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+
+
+
+/* navbar css */
+.navbar{
+    padding: 5px 0px;
+    border-top: 8px solid #247dfb3e;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.navbar .navbar-brand img{
+    width: 200px;
+}
+.navbar .nav-item{
+    margin-right: 12px;
+}
+.navbar .nav-item .nav-link{
+    font-size: 18px;
+    transition: 0.5s;
+}
+.navbar .nav-item .nav-link:hover{
+    color: #247ffb;
+}
+.navbar .nav-item .nav-link.active{
+    color: #247ffb;
+}
+
+
+
+
+/* hero section css start  */
+.hero_section{
+    min-height: 80vh;  /* to remove */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero_section .left_section{
+
+}
+.hero_section .left_section .heading{
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: bold;
+}
+.hero_section .left_section .description{
+    width: 88%;
+    font-size: 15px;
+    margin-top: 15px;
+    color: rgb(96, 96, 96);
+}
+.hero_section .left_section .buttons{
+    display: flex;
+    margin-top: 30px;
+}
+.hero_section .left_section .buttons button{
+    outline: none;
+    background: white;
+    padding: 8px 15px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.hero_section .left_section .buttons .first_btn{
+    border: 2px solid #247ffb;
+    background: #247ffb;
+    color: white;
+}
