@@ -73,16 +73,63 @@ a:hover{
 .navbar .nav-item .nav-link.active{
     color: #247ffb;
 }
+.navbar-brand .navbar-toggler{
+    box-shadow: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
 
+@media screen and (max-width: 740px) {
+    .navbar .navbar-brand img{
+        width: 120px;
+    }
+    .navbar{
+        padding: 10px 0px;
+    }
+}
 
 
 
 /* hero section css start  */
 .hero_section{
-    min-height: 80vh;  /* to remove */
+    min-height: 82vh;  /* to remove */
     display: flex;
     justify-content: center;
+    position: relative;
     align-items: center;
+}
+.hero_section .lottie{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 80px;
+    bottom: 50px;
+}
+.hero_section::before{
+    content: '';
+    width: 200px;
+    height: 200px;
+    background-color: #247dfb19;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-bottom-right-radius: 100%;
+}
+.hero_section::after{
+    content: '';
+    width: 300px;
+    height: 300px;
+    background-color: #247dfb11;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-bottom-right-radius: 100%;
+}
+.hero_section .left_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .hero_section .left_section .heading{
     font-size: 50px;
@@ -131,13 +178,10 @@ a:hover{
     margin-right: 15px;
     font-size: 28px;
 }
-
-
-
-
-
 .hero_section .right_section{
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .hero_section .right_section .input_div{
     margin-top: 25px;
@@ -160,6 +204,11 @@ a:hover{
     left: 15px;
     font-size: 14px;
 }
+.hero_section .right_section .submit_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .hero_section .right_section button{
     margin-top: 25px;
     padding: 10px 67px;
@@ -169,6 +218,55 @@ a:hover{
     margin-top: 25px;
     font-size: 18px;
     font-weight: bold;
+}
+
+
+@media screen and (max-width: 740px) {
+    .hero_section{
+        min-height: unset;  /* to remove */
+    }
+    .hero_section .lottie{
+        right: 20px;
+        bottom: 30px;
+    }
+    .hero_section::before{
+        display: none;
+    }
+    .hero_section::after{
+       display: none;
+    }
+    .hero_section .left_section .heading{
+        font-size: 40px;
+        line-height: 43px;
+        margin-top: 50px;
+    }
+    .hero_section .left_section .heading::after{
+        width: 35px;
+        height: 35px;
+        margin-left: 18px;
+        margin-top: 4px;
+    }
+    .hero_section .left_section .description{
+        width: 100%;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .hero_section .left_section .buttons{
+        margin-top: 20px;
+    }
+    .hero_section .left_section .buttons button{
+        margin-right: 10px;
+    }
+    .hero_section .right_section{
+        margin-top: 40px;
+    }
+    .hero_section .right_section .submit_btn{
+        justify-content: flex-start;
+    }
+    .hero_section .right_section button{
+        margin-bottom: 40px;
+        margin-top: 15px;
+    }
 }
 
 
