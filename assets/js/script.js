@@ -3,6 +3,7 @@ const ticket_type_input = document.getElementById('ticket_type');
 const ticket_count_input = document.getElementById('ticket_count');
 const meal_input = document.getElementById('meal_plan');
 const promo_input = document.getElementById('promo_code');
+const form = document.getElementById('form__')
 
 // const coupons = ['Adil25', 'Adil50', 'Adil75'];
 let ticket_type_value = 1199;
@@ -57,6 +58,37 @@ function checkTotal() {
   let sum = ticket_type_value * ticket_count_value + meal_value;
   sum = applyPromoCode(promo_code, sum);
   total.innerText = sum;
+  document.getElementById('total_input').value = sum
 }
 
 checkTotal();
+
+
+
+
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Make an AJAX request to submit the form data
+  fetch('booking.php', {
+      method: 'POST',
+      body: new FormData(form)
+  })
+  .then(response => {
+      if (response.ok) {
+          // Registration successful
+          swal("Success", "Registration successful!", "success");
+      } else {
+          // Registration failed
+          swal("Error", "Registration failed.", "error");
+      }
+  })
+  .catch(error => {
+      // Error occurred
+      console.log(error);
+      swal("Error", "An error occurred.", "error");
+  });
+
+  form.querySelectorAll('input').forEach((item)=>item.value="")
+});
