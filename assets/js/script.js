@@ -66,29 +66,40 @@ checkTotal();
 
 
 
+let alertStatus = localStorage.getItem('alert')
+if(alertStatus === 'success'){
+  swal("Success", "Registration successful!", "success");
+  localStorage.removeItem('alert')
+}
+if(alertStatus === 'error'){
+  swal("Error", "Registration failed.", "error");
+  localStorage.removeItem('alert')
+}
 
-form.addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the default form submission
 
-  // Make an AJAX request to submit the form data
-  fetch('booking.php', {
-      method: 'POST',
-      body: new FormData(form)
-  })
-  .then(response => {
-      if (response.ok) {
-          // Registration successful
-          swal("Success", "Registration successful!", "success");
-      } else {
-          // Registration failed
-          swal("Error", "Registration failed.", "error");
-      }
-  })
-  .catch(error => {
-      // Error occurred
-      console.log(error);
-      swal("Error", "An error occurred.", "error");
-  });
 
-  form.querySelectorAll('input').forEach((item)=>item.value="")
-});
+// form.addEventListener('submit', function(event) {
+//   event.preventDefault(); // Prevent the default form submission
+
+//   // Make an AJAX request to submit the form data
+//   fetch('booking.php', {
+//       method: 'POST',
+//       body: new FormData(form)
+//   })
+//   .then(response => {
+//       if (response.ok) {
+//           // Registration successful
+//           swal("Success", "Registration successful!", "success");
+//       } else {
+//           // Registration failed
+//           swal("Error", "Registration failed.", "error");
+//       }
+//   })
+//   .catch(error => {
+//       // Error occurred
+//       console.log(error);
+//       swal("Error", "An error occurred.", "error");
+//   });
+
+//   form.querySelectorAll('input').forEach((item)=>item.value="")
+// });
